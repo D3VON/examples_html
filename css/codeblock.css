@@ -1,0 +1,31 @@
+/* found here: http://adis.ca/article/pretty-code-block-in-css/ */
+
+/* pre {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 95%;
+    line-height: 140%;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+*/
+
+pre { font: 100% courier,monospace; border: 1px solid #ccc; overflow: auto; overflow-x: scroll; width: 90%; padding: 0 1em 1em 1em; margin: 1em auto 2em auto; background: #fff7f0; color: #000 }
+
+code {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 95%;
+    line-height: 140%;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    background: #3af8ff;
+}
+
+#content code {
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid #bebab0;
+}

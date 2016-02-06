@@ -1,0 +1,152 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, blockquote {
+	margin: 0; padding: 0; border: 0;
+}
+
+body {
+	font-family: Helvetica, Arial, Sans-Serif; line-height: 24px;
+	background: #b9d2f8 url(images/body-bg.jpg) center top no-repeat;
+}
+
+	#container {
+		width: 980px; margin: 0 auto;
+	}
+	
+	#header {
+		padding: 48px 16px 0 16px; overflow: hidden;
+	}
+		#header h1 a {
+			display: block; width: 211px; height: 61px; float: left;
+			background: url(images/D3VON_logo_calculatortext.gif); text-indent: -9999px;
+		}
+		
+		#header ul#nav {
+			width: 720px; float: right; margin: 42px 0 0 0;
+		}
+			#header ul#nav li {
+				float: left; list-style: none;
+			}
+				#header ul#nav li a {
+					display: block; width: 155px; height: 34px; margin: 0 0 0 25px; padding: 12px 0 0 0; 
+					font-size: 24px; text-transform: lowercase; color: #fff; text-decoration: none; text-align: center;
+					text-shadow: 0 3px 3px #333;
+				}
+					#header ul#nav li a:hover, #header ul#nav li a.active {
+						background: url(images/active-nav.png);
+					}
+					 
+				
+	#content {
+		width: 938px; padding: 16px 16px 60px 16px; overflow: hidden;
+		background: url(images/white-trans.png);
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+	}
+	
+		#content p {
+			font-size: 14px; color: #fff; margin: 0 0 24px 0;
+		}
+		#content a {
+			color: #4d74bb; text-decoration: none;
+		}
+			#content a:hover {
+				color: #234c97;
+			}
+		#content h2 {
+			font-size: 32px; text-transform: lowercase; font-weight: normal; color: #fff; margin: 0 0 16px 0; clear: both;
+		}	
+			#content h2.featured-video {
+				padding: 2px 0 0 34px; background: url(images/video-icon.png) left 0 no-repeat;
+			}
+			#content h2.events {
+				padding: 2px 0 0 34px; margin: 0 0 24px 0; background: url(images/calendar-icon.png) left 2px no-repeat; 
+			}
+			#content h2.team {
+				padding: 2px 0 0 34px; background: url(images/team-icon.png) left 2px no-repeat;
+			}
+		#content h3 {
+			font-size: 24px; font-weight: normal;
+		}
+		
+		#content p.btn a {
+			width: 220px; height: 35px; padding: 10px 0 0 0; float: right;
+			background: url(images/button-bg.png); 
+			font-size: 24px; text-transform: lowercase; text-align: center;
+		}
+			
+		
+		#content #features {
+			width: 940px; height: 457px; margin: 0 0 48px 0;
+			overflow: scroll; /* Changed to hidden if javascript enabled */ 
+		}
+			#content #features ul {
+				width: 2820px;
+			}
+		
+			#content #features ul li {
+				float: left;
+			}
+			
+		#content .column {
+			width: 409px; float: left; padding: 0 30px 0 30px; margin: 0 0 24px 0;
+		}
+			#content .column .video {
+				width: 387px; height: 222px; padding: 13px 0 0 17px; margin: 0 0 24px 0;
+				background: url(images/video-bg.jpg) no-repeat;
+			}
+			
+			#content .column dl dt {
+				width: 55px; float: left; padding: 10px 0 0 0;  overflow: auto;
+				color: #fff; font-size: 64px; line-height: 34px;
+			}
+				#content .column dl dt span {
+					font-size: 16px; text-transform: uppercase; display: block;;
+				}
+				#content .column dl dd {
+					float: left; width: 354px;
+				}
+				
+				#content .column dl h4 {
+					font-size: 32px; font-weight: normal; color: #fff; margin: 0 0 5px 0;
+				}
+			
+		#content ul#team {
+			list-style: none; overflow: hidden;
+		}
+			#content ul#team li {
+				float: left; margin: 0 0 0 27px;
+			}
+				#content ul#team li a {
+					display: block; text-indent: -9999px;
+				}
+					#content ul#team li a.joe {
+						width: 199px; height: 229px;
+						background: url(images/joe.jpg);
+					}
+					#content ul#team li a.charlie {
+						width: 199px; height: 229px;
+						background: url(images/charlie.jpg);
+					}
+					#content ul#team li a.lars {
+						width: 205px; height: 233px;
+						background: url(images/lars.jpg);
+					}
+					#content ul#team li a.marco {
+						width: 198px; height: 229px;
+						background: url(images/marco.jpg);
+					}
+
+
+	#footer {
+		min-height: 159px; overflow: hidden;
+		background: url(images/footer-bg.jpg) center 0 no-repeat;
+	}
+		#footer p a.back-top {
+			float: right; margin: 14px 24px 0 0;
+			font-size: 12px; text-decoration: none; color: #4d74bb;
+		}
+			#footer p a.back-top:hover {
+				color: #234c97;
+			}
+
+				

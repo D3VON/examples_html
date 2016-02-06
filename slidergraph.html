@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Slider tool as one-dimensional graph</title>
+
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0"/>
+    <link rel="stylesheet" href="http://egorkhmelev.github.com/jslider/plugins/google-code-prettify/prettify.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="http://egorkhmelev.github.com/jslider/css/bootstrap.min.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="http://egorkhmelev.github.com/jslider/css/jquery.slider.min.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="http://egorkhmelev.github.com/jslider/css/main.css" type="text/css" charset="utf-8">
+    <!-- end CSS-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://egorkhmelev.github.com/jslider/plugins/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="http://egorkhmelev.github.com/jslider/js/jquery.slider.min.js"></script>
+    <script type="text/javascript" src="http://egorkhmelev.github.com/jslider/js/main.js"></script>
+    <script async="" src="js/slidergraph.js"></script>
+
+    <!-- for slider / range graph -->
+    <style>
+        .holder {
+            width: 200px;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <p>woof</p>
+    <p>meow</p>
+    <div class="holder">
+        <!-- set *owner's* low and high values here -->
+        <!-- have to figur out how, to make red or green depending on profit or loss versus current price -->
+        <input id="price-slider" type="slider" name="price" value="99;112" />
+    </div>
+
+    <div class="notes">
+        <p>I got this from:</p>
+        <p>http://jsfiddle.net/v3gUg/18/light/</p>
+        <p></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Threshold Key Graph to show 52 week high and low and my profit or loss</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        svg {
+            font: 10px sans-serif;
+            font-weight: bold;
+        }
+
+        .caption {
+            font-weight: bold;
+        }
+
+        .key path {
+            display: none;
+        }
+
+        .key line {
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        table {
+             border-collapse: collapse;
+         }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<p>
+Textie-wextie
+</p>
+
+
+
+<table>
+    <tr>
+        <td>
+            <table>
+                <tr><td>This is a row</td></tr>
+                <tr>
+                    <td>This is a cell</td>
+                    <td id="woof">
+
+
+                        /****************************************************
+                          INLINE
+
+
+
+
+                        <script src="//d3js.org/d3.v3.min.js"></script>
+                        <script>
+                            var width = 220, // seems to be size of 'container' of the graph
+                                height = 20, // less than 50 will start cutting off numbers
+                                formatPercent = d3.format(".0%"),
+                                formatNumber = d3.format(".0f");
+
+                            // this thing holds the 'ticks' -- the axis values
+                            var threshold = d3.scale.threshold()
+                                   // .domain([0,.11, .22, .33, .50,1]) // original
+                                    .domain([22, 33, 44, 55])
+                                    //orig:  .range(["#ffffff","#ffffff", "#a0b28f", "#d8b8b3", "#b45554", "#760000","#ffffff"]);
+                                    .range(["#ffffff","#ffffff", "green", "#ffffff"]);
+                            // also found this example: .range(["red", "white", "green"]);
+
+                            // A position encoding for the key only.
+                            var x = d3.scale.linear()
+                                   // .domain([0, 1]) // original was percentages between 0 and 1
+                                    .domain([22, 55])
+                                    .range([0, 200]); // this seems to be the actual width of the graph within its container (see 'width' var)
+
+                            var xAxis = d3.svg.axis()
+                                    .scale(x)
+                                    .orient("bottom")
+                                    .tickSize(9)
+                                    .tickValues(threshold.domain())
+                                    //orig: .tickFormat(function(d) { return d === .5 ? formatPercent(d) : formatNumber(100 * d); });
+                                    // I don't need that, because I want dollar amounts, not percentages.
+                                    ;
+
+                            var svg = d3.select("#woof").append("svg")
+                                    .attr("width", width)
+                                    .attr("height", height)
+                                    ;
+
+                            var g = svg.append("g")
+                                    .attr("class", "key")
+                                    .attr("transform", "translate(10, 1)"); // 10px from left, 0 px from the botton
+                                    // failed attempt at modifying: .attr("transform", "translate(" + 0 + "," + 0 + ")");
+
+                            g.selectAll("rect")
+                                    .data(threshold.range().map(function(color) {
+                                        var d = threshold.invertExtent(color);
+                                        if (d[0] == null) d[0] = x.domain()[0];
+                                        if (d[1] == null) d[1] = x.domain()[1];
+                                        return d;
+                                    }))
+                                    .enter().append("rect")
+                                    .attr("height", 7) // this is the height of the graph's horizontal bar
+                                    .attr("x", function(d) { return x(d[0]); })
+                                    .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+                                    //.style("stroke", "#000") // makes just the middle block outlined with a line
+                                    .style("fill", function(d) { return threshold(d[0]); });
+
+                            g.call(xAxis);  // orig: .append("text")
+                                            // orig: .attr("class", "caption")
+                                            // orig: .attr("y", 0)
+                                            // orig: .attr("y", -6)
+                                            // orig: .text("Percentage of stops that involved force")
+                                            // orig: ;
+                             /* This seems to just be drawn on top of all the previous stuff.
+                                It just puts a line exactly where I want it.
+                                The reason I need this is that I could only get one rectangle to have a sharp line
+                                around it, but I want the whole series of rectangles to have lines around them.
+
+                                I found this text and solution at http://stackoverflow.com/questions/15573594/creating-a-border-around-your-d3-graph
+                                It said: The svg var is just a container. You need to add a path or element to the container
+                                and then give it the stroke color and width you want for your border. There is more
+                                than one way to do this. In this gist I did it by adding a rect
+
+                                Turns out I removed a lot of .style stuff from what was there at stackoverflow
+                                In stead, I'm just drawing a pure line.
+                              */
+                            //top line
+                             var borderPathTop = svg.append("rect")
+                             .attr("x", 10) // 10px from the absolute left
+                             .attr("y", 8) // 0px from the absolute top of where the graph is drawn
+                             .attr("height", 1)
+                             .attr("width", 201);
+                            //bottom line
+                            var borderPathBottom = svg.append("rect")
+                                    .attr("x", 10)
+                                    .attr("y", 1)
+                                    .attr("height", 1)
+                                    .attr("width", 201);
+
+                        </script>
+                    </td>
+                    <td>This is a cell</td>
+                </tr>
+                <tr><td>This is a row</td></tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<p>
+    This is someting called a Threshold Key Graph I'm using to show 52 week high and low and my profit or loss.
+    My goal was a one-dimensional bar-chart kind of thing.
+</p>
+<p>
+
+</p>
+
+
+</body>
+</html>
