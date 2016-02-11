@@ -255,7 +255,7 @@ Textie-wextie
 
                                 var g = svg.append("g")
                                         .attr("class", "key")
-                                        .attr("transform", "translate(25, 1)"); // 25px from left, 0 px from the botton
+                                        .attr("transform", "translate(0, 1)"); // 25px from left, 0 px from the botton
                                 // failed attempt at modifying: .attr("transform", "translate(" + 0 + "," + 0 + ")");
 
                                 g.selectAll("rect")
@@ -281,13 +281,13 @@ Textie-wextie
 
                                 //top line
                                 var borderPathTop = svg.append("rect")
-                                        .attr("x", 25) // 25px from the absolute left
+                                        .attr("x", 0) // 0px from the absolute left
                                         .attr("y", 8) // 0px from the absolute top of where the graph is drawn
                                         .attr("height", 1)
                                         .attr("width", 201);
                                 //bottom line
                                 var borderPathBottom = svg.append("rect")
-                                        .attr("x", 25)
+                                        .attr("x", 0)
                                         .attr("y", 1)
                                         .attr("height", 1)
                                         .attr("width", 201);
@@ -302,7 +302,7 @@ Textie-wextie
                                             <table class="graph" style='width: 200px'>
                                                 <tr>
                                                     <td class="left" style='width: 25%'>$22.34</td>
-                                                    <td class="center" style='width: 50%'>Current: $33.45</td>
+                                                    <td class="center" style='width: 50%'>Last: $33.45</td>
                                                     <td class="right" style='width: 25%'>$56.78</td>
                                                 </tr>
                                             </table>
